@@ -4,8 +4,17 @@ class Api::ContactsController < ApplicationController
     @contacts = Contact.all
 
     first_name_search = params[:first_name]
+    midd_name_search = params[:middle_name]
     last_name_search = params[:last_name]
+    email_search = params[:email]
+
     search_term = params[:search]
+
+    if current_user
+      @contacts = current_user.contacts
+    else
+      @contacts = Contact.all
+    end
 
     if search_term
       @contacts = @contacts.where(

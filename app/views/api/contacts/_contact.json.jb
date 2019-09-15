@@ -10,7 +10,8 @@
   friendly_updated_at: contact.friendly_updated_at,
   bio: contact.bio,
   formatted: {
+              updated_at: contact.friendly_updated_at,
               japanese_phone_number: contact.japanese_phone_number
-             }
-
+             },
+  user_id: contact.user_id
 }
