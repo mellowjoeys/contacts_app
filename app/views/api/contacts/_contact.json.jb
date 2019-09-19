@@ -13,5 +13,6 @@
               updated_at: contact.friendly_updated_at,
               japanese_phone_number: contact.japanese_phone_number
              },
-  user_id: contact.user_id
+  user_id: contact.user_id,
+  contacts: contact.groups
 }
